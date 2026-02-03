@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stefan Simonovski – Photography</title>
+
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
   <style>
     body {
       margin: 0;
@@ -10,46 +15,79 @@
       background: #ffffff;
       color: #111;
     }
-    h1 {
+    header {
       text-align: center;
-      margin-top: 40px;
+      padding: 40px 20px 20px 20px;
     }
-    p {
-      text-align: center;
-      margin-bottom: 40px;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #555;
     }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 10px;
+      gap: 15px;
       padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    img {
+    .gallery img {
       width: 100%;
       height: auto;
+      display: block;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
-<h1>Stefan Simonovski</h1>
-<p>Photographer — Portrait & Lifestyle</p>
+  <header>
+    <h1>Stefan Simonovski</h1>
+    <p>Photographer — Portrait & Lifestyle</p>
+  </header>
 
-<div class="gallery">
-  <img src="Japanese - Soba--3.jpg">
-  <img src="Vietnamese-07236.jpg">
-  <img src="Vietnamese-07251.jpg">
-  <img src="Prague-08343-4.jpg">
-  <img src="Food-08732.jpg">
-  <img src="Food-08533.jpg">
-  <img src="Food-08485.jpg">
-  <img src="DSC09557.jpg">
-  <img src="DSC08145.jpg">
-</div>
+  <div class="gallery">
+    <a href="Japanese - Soba--3.jpg" class="glightbox"><img src="Japanese - Soba--3.jpg" alt="Japanese Soba"></a>
+    <a href="Vietnamese-07236.jpg" class="glightbox"><img src="Vietnamese-07236.jpg" alt="Vietnamese 07236"></a>
+    <a href="Vietnamese-07251.jpg" class="glightbox"><img src="Vietnamese-07251.jpg" alt="Vietnamese 07251"></a>
+    <a href="Prague-08343-4.jpg" class="glightbox"><img src="Prague-08343-4.jpg" alt="Prague 08343"></a>
+    <a href="Food-08732.jpg" class="glightbox"><img src="Food-08732.jpg" alt="Food 08732"></a>
+    <a href="Food-08533.jpg" class="glightbox"><img src="Food-08533.jpg" alt="Food 08533"></a>
+    <a href="Food-08485.jpg" class="glightbox"><img src="Food-08485.jpg" alt="Food 08485"></a>
+    <a href="DSC09557.jpg" class="glightbox"><img src="DSC09557.jpg" alt="DSC09557"></a>
+    <a href="DSC08145.jpg" class="glightbox"><img src="DSC08145.jpg" alt="DSC08145"></a>
+  </div>
+
+  <footer>
+    &copy; 2026 Stefan Simonovski — Contact: shtefski@gmail.com
+  </footer>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({
+      touchNavigation: true,
+      loop: true,
+      zoomable: true,
+      autoplayVideos: false
+    });
+  </script>
 
 </body>
 </html>
-
-
-
-
